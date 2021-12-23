@@ -9,6 +9,5 @@ const myDate = () => {
     const hours = (minutes + theDate.getSeconds) / 12;
 }
 
-
 setInterval(myDate, 1000)
 
