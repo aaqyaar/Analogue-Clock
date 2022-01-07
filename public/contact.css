@@ -1,0 +1,83 @@
+
+/* OUR TEAM FILE STYLING */
+.contact {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(img/contactbg.jpg);
+    background-repeat: no-repeat;
+    height: 83vh;
+    width: 90%;
+    margin-left: 70px;
+    background-position: center;
+    background-size: cover; 
+    font-weight: bold;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+ nav {
+    margin-right: 90px;
+    margin-left: 50px;
+ }
+
+ #flex-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  #flex-contact > .flex-cont {
+    background-color: #fff;
+    margin: 10px;
+    flex-basis: 29%;
+    padding: 60px;
+    text-align: center;
+  }
+  .fa-directions, .fa-clock {
+    font-size: 40px;
+    color: #f48448;
+  }
+.flex-cont:hover {
+    transform: scale(1.02);
+    transition: all 500ms ease-in-out;
+}
+
+.contact-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact-login > .landing-contact {
+  background-color: #fff;
+
+  flex-basis: 29%;
+
+}
+ @media (max-width: 768px) {
+   .contact {
+    margin-left: 0px;
+    height: 70vh;
+    width: 100%;
+   }
+
+   nav {
+    margin-right: 0px;
+    margin-left: 0px;
+    flex-direction: column;
+  }
+    nav ul li {
+        padding-top: 10px;
+        margin-left: 30px;
+  }
+  #flex-contact > .flex-cont {
+    flex-basis: 100%;
+    padding: 60px;
+  }
+  
+ }

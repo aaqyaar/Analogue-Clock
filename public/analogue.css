@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*, *::after , *::before {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.clock .number {
+    --rotation: 0;
+    color: var(--text-color);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+.clock .number1 { --rotation: 30deg; }
+.clock .number2 { --rotation: 60deg; }
+.clock .number3 { --rotation: 90deg; }
+.clock .number4 { --rotation: 120deg; }
+.clock .number5 { --rotation: 150deg; }
+.clock .number6 { --rotation: 180deg; }
+.clock .number7 { --rotation: 210deg; }
+.clock .number8 { --rotation: 240deg; }
+.clock .number9 { --rotation: 270deg; }
+.clock .number10 { --rotation: 300deg; }
+.clock .number11 { --rotation: 330deg; }
+.clock .number12 { --rotation: 360deg; }
+
+.clock .hand {
+    z-index: 10;
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: #78766f;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    box-shadow: 2px 2px rgba(128, 128, 128, 0.34);
+
+}
+
+.clock::after {
+    content: "";
+    position: absolute;
+    background-color: #78766f;
+    z-index: 11;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.clock .hand.hour {
+    width: 6px;
+    height: 30%;
+}
+
+.clock .hand.minute{
+    width: 6px;
+    height: 40%;
+}
+
+.clock .hand.second {
+    z-index: 9;
+    width: 2px;
+    height: 48%;
+    background-color: rosybrown;
+}
