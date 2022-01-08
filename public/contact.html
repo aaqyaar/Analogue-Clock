@@ -17,7 +17,7 @@
         <ul class="flex justify-around">
           <li><a href="analogue.html" class="text-black font-poppins cursor-pointer p-3" style="font-size: 20px;">Home</a></li>
           <li><a href="our-team.html" class="text-black font-poppins cursor-pointer p-3" style="font-size: 20px;">Our Team</a></li>
-          <li><a href="#" class="text-black bg-indigo-50 font-poppins cursor-pointer rounded-full p-3 shadow-xl" style="font-size: 18px;">Contact Us</a></li>
+          <li><a href="#" class="text-black bg-indigo-50 font-poppins cursor-pointer rounded-full p-3 shadow-xl" style="font-size: 15px;">Contact Us</a></li>
         </ul>
         
       </nav>
@@ -56,7 +56,7 @@
                 Saturday - Friday
               <br>  06.00 - 00.30
               <hr>
-                Online Order : 24/7
+                24/7 : Open
                 </h1>
         </div>
     </div>
@@ -93,27 +93,27 @@
         <h3 class="text-2xl font-medium text-gray-900 font-poppins">Send us a message</h3>
         <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8 font-poppins">
         <div>
-            <label for="first-name" class="block text-md font-medium text-gray-900 ">First name *</label>
+            <label for="" class="block text-md font-medium text-gray-900" >First name *</label>
         <div class="mt-1">
-            <input type="text" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="First Name...">
+            <input type="text" id="firstName" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="First Name...">
         </div>
         </div>
             <div>
-            <label for="first-name" class="block text-md font-medium text-gray-900 ">Last name *</label>
+            <label for="" class="block text-md font-medium text-gray-900" >Last name *</label>
             <div class="mt-1">
-                <input type="text" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Last Name...">
+                <input type="text" id="lastName" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Last Name...">
             </div>
         </div>
         <div>
-            <label for="first-name" class="block text-md font-medium text-gray-900 ">Email Address *</label>
+            <label for="" class="block text-md font-medium text-gray-900" >Email Address *</label>
         <div class="mt-1">
-            <input type="email" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Email Address...">
+            <input type="email" id="email" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Email Address...">
         </div>
         </div>
             <div>
-            <label for="first-name" class="block text-md font-medium text-gray-900 ">Phone number *</label>
+            <label for="" class="block text-md font-medium text-gray-900 ">Phone number *</label>
             <div class="mt-1">
-                <input type="tel" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Phone number...">
+                <input type="tel" id="tel" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" placeholder="Phone number...">
             </div>
         </div>
         <div class="sm:col-span-2">
@@ -121,15 +121,56 @@
                 <label for="message" class="block text-sm font-medium text-gray-900">Message *</label>
             </div>
             <div class="mt-1">
-                <textarea id="message" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md" placeholder="Message......."></textarea>
+                <textarea id="message" rows="3" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md" placeholder="Message......."></textarea>
             </div>
         </div>
         <div class="text-right sm:col-span-2">
-            <a href="#" class="px-4 py-3 border rounded-md bg-indigo-600 text-white hover:bg-indigo-700 hover:-translate-y-2 transition shadow-indigo-100">Submit</a>
+            <a href="#" id="checkCredentials" class="px-4 py-3 border rounded-md bg-indigo-600 text-white hover:bg-indigo-700 hover:-translate-y-2 transition shadow-indigo-100">Submit</a>
         </div>
         </form>
 </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+    <script>
+        const checkCredentials = document.querySelector('#checkCredentials');
+        // checking the credentials
+        checkCredentials.addEventListener('click', (e) => {
+            e.preventDefault();
+            first_name = document.querySelector('#firstName').value;
+            last_name = document.querySelector('#lastName').value;
+            email = document.querySelector('#email').value;
+            tel = document.querySelector('#tel').value;
+            message = document.querySelector('#message').value;
+
+            const reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+            if(reg.test(email) && first_name != '' && last_name != '' && tel != '' && message != '') {
+                alert('Your Message has been succesfully sent.')
+                location.reload()
+            } 
+            else if (reg.test(email) && first_name == '' && last_name != '' && tel != '' && message != '') {
+                alert('First Name is null, fill it.')
+            } 
+            else if (reg.test(email) && first_name != '' && last_name == '' && tel != '' && message != '') {
+                alert('last name is null, fill it.')
+            }  
+            else if (email == '' && first_name != '' && last_name != '' && tel != '' && message != '') {
+                alert('Email Address is null, fill it.')
+            } 
+            else if (reg.test(email) && first_name != '' && last_name != '' && tel != '' && message == '') {
+                alert('Message Section is null, fill it.')
+            } else {
+                alert('All fields are empty')
+            }
+        })
+    </script>
 </body>
 </html>

@@ -77,12 +77,13 @@
      flex-basis: 100%;
    }
    #card img {
-     height: 50vh;
+     height: 45vh;
    }
    nav {
     margin-right: 0px;
     margin-left: 0px;
     flex-direction: column;
+  
   }
   nav ul li {
     padding-top: 10px;
