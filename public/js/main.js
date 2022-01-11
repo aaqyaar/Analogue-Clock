@@ -7,8 +7,8 @@ const captcha = document.querySelector('#captcha');
 let randomNumber = Math.floor(Math.random() * (9999 - 1000) + (1000))
 spanRandom.innerHTML = randomNumber;
 
-const emailAddress = 'abdisamedmoa@gmail.com';
-const password = 'aaqyaar1';
+const emailAddress = 'admin@gmail.com';
+const password = 'admin';
 
 const showPass = () => {
     const password = document.querySelector('#password');
