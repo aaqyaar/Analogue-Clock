@@ -23,13 +23,12 @@ const showPass = () => {
 form.addEventListener('submit', (e) => {
 
     e.preventDefault();
-    const reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
-    if(reg.test(email.value) && pass.value == password && captcha.value == randomNumber) {
+    
+    if(email.value == emailAddress && pass.value == password && captcha.value == randomNumber) {
         window.location = 'analogue.html'
-    } else if(reg.test(email.value) && pass.value != password && captcha.value == randomNumber) {
+    } else if(email.value == emailAddress && pass.value != password && captcha.value == randomNumber) {
       alert("Incorrect Email or Password.")
-    } else if(reg.test(email.value) && pass.value == password && captcha.value != randomNumber) {
+    } else if(email.value == emailAddress && pass.value == password && captcha.value != randomNumber) {
       alert("Incorrect Captcha Code.")
     } 
     else {
