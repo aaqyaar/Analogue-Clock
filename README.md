@@ -3,7 +3,8 @@
 - HTML & CSS (Tailwind CSS for UI)
 - Vanilla JavaScript
 ## Mockups of Our Design
-![img](README_img\smartmockups_kyt3yu28.jpg)
+![images](README_img/smartmockups_kyt3yu28.jpg)
+
 ![img](README_img/smartmockups_kyt3ycwc.jpg)
 
 ```
