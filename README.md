@@ -15,5 +15,5 @@ or
 git clone git@github.com:abdi-aaqyaar/Analogue-Clock.git
 ```
 
-|Analogue - |[Live Demo](https://www.analogue-clock.ga)|
+|Analogue |[Live Demo](https://www.analogue-clock.ga)|
 |--|--|
